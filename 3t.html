@@ -44,24 +44,24 @@
             function oRm2(pS, cS) {
                 var pSi;
                 var cSi;
-                if(pS == 'rock') {
+                if(pS.toLowerCase() == 'rock') {
                     pSi = 0;
-                } else if(pS == 'paper') {
+                } else if(pS.toLowerCase() == 'paper') {
                     pSi = 1;
                 } else {pSi = 2;}
 
-                if(cS == 'rock') {
+                if(cS.toLowerCase() == 'rock') {
                     cSi = 0;
-                } else if(cS == 'paper') {
+                } else if(cS.toLowerCase() == 'paper') {
                     cSi = 1;
                 } else {cSi = 2;}
 
                 if(pSi = (cSi + 1) % 3) {
-                    return `You Win! ${pS} beats ${cS}`;
+                    return `You Win! ${pS.toUpperCase()} beats ${cS.toUpperCase()}`;
                 } else if(cSi = (pSi +1) % 3) {
-                    return `You Lose! ${cS} beats ${pS}`;
+                    return `You Lose! ${cS.toUpperCase()} beats ${pS.toUpperCase()}`;
                 } else {
-                    return `TIE! Both the user and the computer have chosen ${pS}`;
+                    return `TIE! Both the user and the computer have chosen ${pS.toUpperCase()}`;
                 }
             }
         </script>
