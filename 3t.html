@@ -7,17 +7,10 @@
         <script>
             function computerPlay() {
                 let move = Math.floor((Math.random() * 3) + 1);
-                switch(move) {
-                    case 1:
-                        return 'rock';
-                        break;
-                    case 2:
-                        return 'paper';
-                        break;
-                    case 3:
-                        return 'scissors'
-                        break;
-                }
+                return (move == 1)? 'rock'
+                : (move == 2)? 'paper'
+                : 'scissors'
+                ;
             }
             function playRound(pS, cS) {
                 var pSi;
