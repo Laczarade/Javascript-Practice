@@ -19,7 +19,7 @@
                         break;
                 }
             }
-            function oneRound(pS, cS) {
+            function playRound(pS, cS) {
                 var pSi;
                 var cSi;
                 if(pS.toLowerCase() == 'rock') {
@@ -41,6 +41,11 @@
                 } else {
                     return `TIE! Both the user and the computer have chosen ${pS.toUpperCase()}`;
                 }
+            }
+
+            function game() {
+                var pMov = prompt("What is your move?", "rock");
+                console.log(playRound(pMov, computerPlay()));
             }
         </script>
     </body>
