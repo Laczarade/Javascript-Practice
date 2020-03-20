@@ -20,13 +20,25 @@
                 }
             }
             function oneRound(playerSelection, computerSelection) {
-                switch(playerSelection){
+                switch(playerSelection) {
                     case 'rock':
                         return (computerSelection = 'scissors')? 'You Win! Rock beats Scissors'
-                        : (computerSelection = 'paper')? 'You lose! Paper beats Rock'
+                        : (computerSelection = 'paper')? 'You Lose! Paper beats Rock'
                         : 'TIE! Both the user and the computer have chosen Rock'
+                        ;
+                        break;
                     case 'paper':
+                        return (computerSelection = 'rock')? 'You Win! Paper beats Rock'
+                        : (computerSelection = 'scissors')? 'You Lose! Scissors beats Paper'
+                        : 'TIE! Both the user and the computer have chosen Paper'
+                        ;
+                        break;
                     case 'scissors':
+                        return (computerSelection = 'paper')? 'You Win! Scissors beats Paper'
+                        : (computerSelection = 'rock')? 'You Lose! Rock beats Scissors'
+                        : 'TIE! Both the user and the computer have selected Scissors'
+                        ;
+                        break;
                 }
             }
         </script>
