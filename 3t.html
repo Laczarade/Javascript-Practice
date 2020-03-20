@@ -20,7 +20,7 @@
                 }
             }
             function oneRound(playerSelection, computerSelection) {
-                switch(playerSelection) {
+                switch(playerSelection.toLowerCase()) {
                     case 'rock':
                         return (computerSelection = 'scissors')? 'You Win! Rock beats Scissors'
                         : (computerSelection = 'paper')? 'You Lose! Paper beats Rock'
@@ -39,6 +39,29 @@
                         : 'TIE! Both the user and the computer have selected Scissors'
                         ;
                         break;
+                }
+            }
+            function oRm2(pS, cS) {
+                var pSi;
+                var cSi;
+                if(pS == 'rock') {
+                    pSi = 0;
+                } else if(pS == 'paper') {
+                    pSi = 1;
+                } else {pSi = 2;}
+
+                if(cS == 'rock') {
+                    cSi = 0;
+                } else if(cS == 'paper') {
+                    cSi = 1;
+                } else {cSi = 2;}
+
+                if(pSi = (cSi + 1) % 3) {
+                    return `You Win! ${pS} beats ${cS}`;
+                } else if(cSi = (pSi +1) % 3) {
+                    return `You Lose! ${cS} beats ${pS}`;
+                } else {
+                    return `TIE! Both the user and the computer have chosen ${pS}`;
                 }
             }
         </script>
